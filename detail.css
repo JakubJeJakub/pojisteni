@@ -1,0 +1,35 @@
+body {  
+    color: #FFF; /* Bílá barva textu */  
+    font-family: Arial, sans-serif;  
+    text-align: center;  
+    background-image: url('./obrazky/gt500.webp'); /* Pozadí auta */  
+    background-size: cover;  
+    background-position: center;  
+}  
+
+.content {  
+    background-color: rgba(0, 0, 0, 0.7); /* Poloprůhledné pozadí pro vizitku */  
+    padding: 20px;  
+    border-radius: 10px;  
+    max-width: 400px; /* Maximální šířka vizitky */  
+    margin: auto; /* Vycentrování vizitky */  
+}  
+
+.box {  
+    margin: 10px 0;  
+}  
+
+.profil-img {  
+    border-radius: 50%; /* Kulatý rámec pro obrázek */  
+    width: 150px; /* Šířka obrázku */  
+    height: 150px; /* Výška obrázku */  
+    border: 5px solid #FFF; /* Bílý rámec */  
+}  
+
+button {  
+    background-color: #4CAF50; /* Zelená barva pro tlačítka */  
+    color: white; /* Bílá barva textu pro tlačítka */  
+    padding: 8px 20px;  
+    border: none;  
+    cursor: pointer;  
+}

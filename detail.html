@@ -1,0 +1,49 @@
+<!DOCTYPE html>  
+<html lang="cs">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Detail pojištěnce</title>  
+    <link rel="stylesheet" href="detail.css">  
+</head>  
+<body>  
+    <div class="background">  
+        <div class="content">  
+            <h1>Detail pojištěnce</h1>  
+            <div class="box">  
+                <div class="obrazek">  
+                    <img id="profileImage" src="" alt="profil" class="profil-img" />  
+                </div>  
+                <p><strong>Jméno a Příjmení:</strong> <span id="fullName"></span></p>  
+            </div>  
+            <div class="box">  
+                <p><strong>Telefon:</strong> <span id="phone"></span></p>  
+                <p><strong>Email:</strong> <span id="email"></span></p>  
+                <p><strong>Pohlaví:</strong> <span id="gender"></span></p>  
+                <p><strong>Věk:</strong> <span id="age"></span></p>  
+                <p><strong>Druh pojistky:</strong> <span id="insuranceType"></span></p>  
+            </div>  
+            <button onclick="window.close()">Zavřít</button>  
+        </div>  
+    </div>  
+    <script>  
+        const osoba = JSON.parse(localStorage.getItem('osoba'));  
+        document.getElementById('fullName').innerText = osoba.jmeno + ' ' + osoba.prijmeni;  
+        document.getElementById('phone').innerText = osoba.telefon;  
+        document.getElementById('email').innerText = osoba.email;  
+        document.getElementById('gender').innerText = osoba.pohlavi;  
+        document.getElementById('age').innerText = osoba.vek;  
+        document.getElementById('insuranceType').innerText = osoba.druhPojistky;  
+
+        let profileImage = '';  
+        if (osoba.pohlavi === 'žena') {  
+            profileImage = 'obrazky/dračice.jpg';  
+        } else if (osoba.pohlavi === 'muž') {  
+            profileImage = 'obrazky/draveec.webp';  
+        } else {  
+            profileImage = 'obrazky/mustangus.jpg'; // Výchozí obrázek pro neuvedeno  
+        }  
+
+        document.getElementById("profileImage").src = profileImage;   
+    </script>  
+</body>  
+</html>

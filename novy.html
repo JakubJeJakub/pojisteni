@@ -1,0 +1,60 @@
+<!DOCTYPE html>  
+<html lang="cs">  
+<head>  
+    <meta charset="UTF-8">  
+    <link rel="stylesheet" href="novy.css">  
+    <title>Formulář</title>  
+</head>  
+<body>  
+
+<h1>Vyplňte formulář:</h1>  
+
+<form id="myForm">  
+    Jméno: <input type="text" name="jmeno" id="jmeno" required><br><br>  
+    Příjmení: <input type="text" name="prijmeni" id="prijmeni" required><br><br>  
+    Pohlaví:  
+    <select id="pohlavi" required>  
+        <option value="žena">Žena</option>  
+        <option value="muž">Muž</option>  
+        <option value="neuvedeno">neuvedeno</option>  
+    </select>  
+    Věk: <input type="number" name="vek" id="vek" min="18" max="110" required><br><br>  
+    Číslo: <input type="tel" name="cislo" id="telefon" required><br><br>  
+    Email: <input type="email" name="email" id="email" required><br><br>  
+    Druh pojistky:  
+    <select id="moznosti">  
+        <option value="auto">na auto</option>  
+        <option value="dum">na dům</option>  
+        <option value="zivotni">životní</option>  
+        <option value="blbost">na blbost</option>  
+        <option value="proti_zivlum">proti živlům</option>  
+    </select>  
+    <br><br>  
+</form>  
+
+<button type="button" onclick="vytvorPojisteneho()">Uložit</button>  
+<button type="button" id="buttonShowTable" onclick="zobrazTabulku()">Ukaž tabulku</button>  
+
+<table id="myTable" style="display: none;">  
+    <thead>  
+        <tr>  
+            <th>Jméno</th>  
+            <th>Příjmení</th>  
+            <th>Věk</th>  
+            <th>Pohlaví</th>  
+            <th>Číslo</th>  
+            <th>Email</th>  
+            <th>Druh pojistky</th>  
+            <th>Detail</th>  
+            <th>Smaž</th>  
+        </tr>  
+    </thead>  
+    <tbody id="tabulkaTelo">  
+        <!-- JavaScript vloží řádky sem -->  
+    </tbody>  
+</table>  
+
+<script src="pojisteni.js"></script>  
+
+</body>  
+</html>

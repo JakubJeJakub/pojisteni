@@ -1,0 +1,28 @@
+body {  
+    background-image: url('./obrazky/gt500.webp');  
+    background-size: cover;  
+    color: #333; /* Barva textu */  
+    font-family: Arial, sans-serif;  
+    text-align: center;  
+}  
+
+button {  
+    background-color: #4CAF50; /* Zelená barva pro tlačítka */  
+    color: white; /* Bílá barva textu pro tlačítka */  
+    padding: 8px 20px;  
+    border: none;  
+    cursor: pointer;  
+}  
+
+table {  
+    color: #FFF; /* Bílý text v tabulce */  
+    background-color: #000; /* Černé pozadí tabulky */  
+    width: auto;  
+    border-collapse: collapse;  
+    text-align: center;  
+}  
+
+th, td {  
+    border: 1px solid #FFF;  
+    padding: 8px;  
+}
